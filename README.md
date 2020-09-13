@@ -17,9 +17,6 @@ These look like a helpful sites for the YX5200:
 * https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299
 * https://github.com/DFRobot/DFRobotDFPlayerMini
 
-This one is a re-write of the DFRobot library; also includes an English language spec sheet in the "extras" directory.
-* https://github.com/PowerBroker2/DFPlayerMini_Fast
-
 # My Experiences
 
 Here is a description of my experiences using the YX5200 module (I had some challenges)
