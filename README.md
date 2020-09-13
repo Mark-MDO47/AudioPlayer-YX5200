@@ -21,12 +21,12 @@ These look like a helpful sites for the YX5200:
 
 Here is a description of my experiences using the YX5200 module (I had some challenges)
 
-YX5200 module works nicely; it does not require a separate programmer and can play MP3 files. *.wav file start faster after a command so I used those instead, but it depends on what your project is for as to what file format you would use.
-
 You definitely want to use the 1K resistor on the TX line or you can distinctly hear clicks during serial communication.
 
 My experience:
 - Using .playMp3Folder() worked on the first few calls but I had trouble making it work when interrupting a playing sound. I tried a bunch of things (but not every combination) and finally gave it up and now use the most basic of functions .play().
+  - Also *.wav files start faster after a command to play. Apparently there is some overhead to start an *.mp3 file.
+  - Because the .play() function requires specific filenames and orders of file copies, I wrote copyem.py to help me get the files into the SD card in the correct order.
 - While doing the above experiments I had the impression that turning ACK on (default at this time) made it more likely to have the trouble above. I turned ACK off in the .begin(mySoftwareSerial, false, true) call.
 - Sometimes there was a delay in the BUSY pin registering after starting a sound. So far all the delays I have documented were <= 40 milliseconds. Since my code wants to do things (LED-related) faster than that, I put in code to force a fake BUSY for the first 250 milliseconds after starting a sound. Probably overkill.
 - Some of my readings indicate that there are knock-off clones of the YX5200 module that may not implement all the functions properly. My guess would be that they have an out-of-date set of firmware. At least some of these clones used a red LED to indicate sound playing instead of the blue LED used on the genuine YX5200. My modules did have a blue LED, but this is not necessarily a guarantee that they were genuine, so it is possible the problems I had were due to using a knock-off clone.
