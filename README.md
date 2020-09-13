@@ -4,6 +4,9 @@ Easy method to reliably use the YX5200 Audio Player module.
 These routines were developed by me for the Rubber Band Gun
 * https://github.com/Mark-MDO47/RubberBandGun
 
+The YX5200 module can be found here
+* https://smile.amazon.com/Anmbest-YX5200-DFPlayer-Supporting-Arduino/dp/B07JGWMPTF/
+
 ![alt text](https://github.com/Mark-MDO47/RubberBandGun/blob/master/PartsInfo/YX5200_MP3player.png "Top view pin arrangement on YX5200 module")
 ![alt text](https://github.com/Mark-MDO47/RubberBandGun/blob/master/PartsInfo/YX5200_MP3player_pinouts.png "Description of pins on YX5200 module")
 
