@@ -16,10 +16,6 @@ Files to help with using YX5200 can be found here:
 * https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299
 * https://github.com/DFRobot/DFRobotDFPlayerMini
 
-These look like a helpful sites for the YX5200:
-* https://wiki.dfrobot.com/DFPlayer_Mini_SKU_DFR0299
-* https://github.com/DFRobot/DFRobotDFPlayerMini
-
 Best datasheet I could find on the YX5200 chip is found here
 * https://github.com/PowerBroker2/DFPlayerMini_Fast/blob/master/extras/FN-M16P%2BEmbedded%2BMP3%2BAudio%2BModule%2BDatasheet.pdf
 
