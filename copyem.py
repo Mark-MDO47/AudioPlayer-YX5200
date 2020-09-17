@@ -45,7 +45,13 @@ if __name__ == "__main__":
     my_parser = argparse.ArgumentParser(prog='copyem',
         formatter_class=argparse.RawTextHelpFormatter,
         description="stdout receives list of copy commands for freshly formatted SD card",
-        epilog="""Example:
+        epilog="""copyem.py is used to copy consecutive *.wav files to a newly formatted TF or SD card for YX5200 Audio Module
+The source files in the --directory area DIRECTORY are of format ####*.wav where # = decimal digit.
+By default the file Attributions.html in DIRECTORY will be stored on SD card in the ATTRIBUTIONS/ directory.
+When using the .play() method, the files must be of form ###.ext (ext=wav, mp3, etc.) and must be copied in order.
+copyem.py uses *.wav files but YX5200 can use other formats too.
+If there are SD card files 001.wav and 003.wav, there must be a 002.wav or .play() will find the wrong file. copyem.py takes care of that.
+Example:
 python copyem.py -d ./myAudioFiles -s H: -f soundsOfSilence.wav --linux
 """,
         usage='%(prog)s {-d directory -s sd-disk -f fname-silence {-l linux | -w windows} }')
