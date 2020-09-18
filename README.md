@@ -59,21 +59,21 @@ At this point, ./myAudioFiles has the following (short list of *.wav to make it 
 Run the program as follows
 - python copyem.py -d ./myAudioFiles -s H: -f 0005_silence.wav > mycopy.sh
 
-It will output the following
-- cp ./myAudioFiles/0001_first.wav H/:001.wav
+It will output the following (note: a blank line before attribution is omitted here)
+- cp ./myAudioFiles/0001_first.wav H:/001.wav
 - cp ./myAudioFiles/0005_silence.wav H:/002.wav
-- cp ./myAudioFiles/0003_third.wav H/:003.wav
+- cp ./myAudioFiles/0003_third.wav H:/003.wav
 - cp ./myAudioFiles/0005_silence.wav H:/004.wav
 - cp ./myAudioFiles/0005_silence.wav H:/005.wav
 - mkdir H:/ATTRIBUTIONS
 - cp  ./myAudioFiles/Attributions.html H:/ATTRIBUTIONS
 
 Alternatively, "python copyem.py -d ./myAudioFiles -s H: -f 0005_silence.wav --windows > mycopy.bat" will output the following
-- copy .\myAudioFiles\0001_first.wav H\:001.wav
+- copy .\myAudioFiles\0001_first.wav H:\001.wav
 - copy .\myAudioFiles\0005_silence.wav H:\002.wav
-- copy .\myAudioFiles\0003_third.wav H\:003.wav
+- copy .\myAudioFiles\0003_third.wav H:\003.wav
 - copy .\myAudioFiles\0005_silence.wav H:\004.wav
-- copy .\myAudioFiles\0005_silence.wav H\:005.wav
+- copy .\myAudioFiles\0005_silence.wav H:\005.wav
 - mkdir H:\ATTRIBUTIONS
 - copy  .\myAudioFiles\Attributions.html H:\ATTRIBUTIONS
 
