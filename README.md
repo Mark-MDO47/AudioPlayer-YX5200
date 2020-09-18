@@ -42,7 +42,7 @@ Note: I run this routine in GIT bash on Windows 10, so I use the H: (or other le
 
 ![alt text](https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/images/CopyemHelp.png "Help text for copyem.py")
 
-It is OK copy to the SD card using names like 001_this_is_a_test.wav, but if the names get longer than 8.3 then the directory gets more complicated and it might affect the speed of starting a sound eventually, so I just copied the number such as 001.wav.
+It is OK to copy to the SD card using names like 001_this_is_a_test.wav, but if the names get longer than 8.3 then the directory gets more complicated and it might affect the speed of starting a sound eventually, so I just copied the number such as 001.wav.
 
 So the sequence is:
 - Put your ####*.wav files in a directory. For this example I will use the directory ./myAudioFiles
