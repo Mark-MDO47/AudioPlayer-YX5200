@@ -52,7 +52,7 @@ When using the .play() method, the files must be of form ###.ext (ext=wav, mp3, 
 copyem.py uses *.wav files but YX5200 can use other formats too.
 If there are SD card files 001.wav and 003.wav, there must be a 002.wav or .play() will find the wrong file. copyem.py takes care of that.
 Example:
-python copyem.py -d ./myAudioFiles -s H: -f soundsOfSilence.wav --linux
+python copyem.py -d ./myAudioFiles -s H: -f 0070_soundsOfSilence.wav --linux
 """,
         usage='%(prog)s {-d directory -s sd-disk -f fname-silence {-l linux | -w windows} }')
     my_parser.add_argument('-d', '--directory', type=str, help='path to directory containing *.wav files', action='store', default="D:/svnNew/SoundsSciFi/SoundsRecordedMDO/secondCut")
