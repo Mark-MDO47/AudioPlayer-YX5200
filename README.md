@@ -34,6 +34,14 @@ My experience:
 - Some of my readings indicate that there are knock-off clones of the YX5200 module that may not implement all the functions properly. My guess would be that they have an out-of-date set of firmware. At least some of these clones used a red LED to indicate sound playing instead of the blue LED used on the genuine YX5200. My modules did have a blue LED, but this is not necessarily a guarantee that they were genuine, so it is possible the problems I had were due to using a knock-off clone.
 - Both grounds on the YX5200 are marked as digital ground, but I found that if I connected them together the line output had a buzz (didn't hear it on speaker output). I got better results when I pretended that the GND between SPK1 and SPK2 was an analog ground.
 
+# copyem.py
+
+This is a routine that makes it much easier to create SD cards that work with the .play() routine. Below is the help text from copyem.py.
+
+Note: I run this routine in GIT bash on Windows 10, so I use the H: (or other letter) to access the drive but use the / separator for directories.
+
+![alt text](https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/images/CopyemHelp.png "Help text for copyem.py")
+
 # Extras:
 
 ## Rewrite of DFRobot routines
