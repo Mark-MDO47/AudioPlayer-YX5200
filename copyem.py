@@ -31,7 +31,7 @@ def doCopyem(theFrom = None, theSD = None, fnameSilence = None, copyCmd = None, 
             continue # we do not want number 0 to be copied
         for idx in range(count, fcount):
             print("%s %s%s%s %s%s%03d.wav" % (copyCmd, theFrom, theSlash, fnameSilence, theSD, theSlash, idx))
-        print("%s %s%s%s %s%s%03d.wav" % (copyCmd, theFrom, theSlash, fname, theSlash, theSD, fcount))
+        print("%s %s%s%s %s%s%03d.wav" % (copyCmd, theFrom, theSlash, fname, theSD, theSlash, fcount))
         count = fcount + 1
 
     # now the attributions
