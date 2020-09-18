@@ -42,6 +42,43 @@ Note: I run this routine in GIT bash on Windows 10, so I use the H: (or other le
 
 ![alt text](https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/images/CopyemHelp.png "Help text for copyem.py")
 
+It is OK copy to the SD card using names like 001_this_is_a_test.wav, but if the names get longer than 8.3 then the directory gets more complicated and it might affect the speed of starting a sound eventually, so I just copied the number such as 001.wav.
+
+So the sequence is:
+- Put your ####*.wav files in a directory. For this example I will use the directory ./myAudioFiles
+- Also make a ####*.wav file that is just a second or two of silence and place that in ./myAudioFiles
+- Optionally make a Attributions.html file for attributions and place that in ./myAudioFiles
+- Connect an SD-card that is 32 gigabytes or less and FAT-32 format the SD-card. In this example it will be on H:
+
+At this point, ./myAudioFiles has the following (short list of *.wav to make it readable)
+- 0001_first.wav
+- 0003_third.wav
+- 0005_silence.wav
+- Attributions.html
+
+Run the program as follows
+- python copyem.py -d ./myAudioFiles -s H: -f 0005_silence.wav > mycopy.sh
+
+It will output the following
+- cp ./myAudioFiles/0001_first.wav /H:001.wav
+- cp ./myAudioFiles/0005_silence.wav H:/002.wav
+- cp ./myAudioFiles/0003_third.wav /H:003.wav
+- cp ./myAudioFiles/0005_silence.wav H:/004.wav
+- cp ./myAudioFiles/0005_silence.wav /H:005.wav
+- mkdir H:/ATTRIBUTIONS
+- cp  ./myAudioFiles/Attributions.html H:/ATTRIBUTIONS
+
+Alternatively, "python copyem.py -d ./myAudioFiles -s H: -f 0005_silence.wav --windows > mycopy.bat" will output the following
+- copy .\myAudioFiles\0001_first.wav \H:001.wav
+- copy .\myAudioFiles\0005_silence.wav H:\002.wav
+- copy .\myAudioFiles\0003_third.wav \H:003.wav
+- copy .\myAudioFiles\0005_silence.wav H:\004.wav
+- copy .\myAudioFiles\0005_silence.wav \H:005.wav
+- mkdir H:\ATTRIBUTIONS
+- copy  .\myAudioFiles\Attributions.html H:\ATTRIBUTIONS
+
+Then either source mycopy.sh or run mycopy.bat, eject the SD card, and insert it into the YX5200.
+
 # Extras:
 
 ## Rewrite of DFRobot routines
