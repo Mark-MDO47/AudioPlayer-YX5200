@@ -92,5 +92,5 @@ This module puts out really good sound. On the RBG project, the speaker just was
 See here for programming the KCX_BT_EMITTER to auto-connect to your speaker:
 - https://github.com/Mark-MDO47/BluetoothAudioTransmitter_KCX_BT_EMITTER
 
-See here for a schematic showing the YX5200 connected to the KCX_BT_EMITTER. Note the connection to the KCX_BT_EMITTER AGND (analog ground).
+See here for a schematic showing the YX5200 connected to the KCX_BT_EMITTER. Note the connection to the KCX_BT_EMITTER AGND (audio or analog ground).
 - https://github.com/Mark-MDO47/RubberBandGun/blob/master/RubberBandGun_Wiring.pdf
