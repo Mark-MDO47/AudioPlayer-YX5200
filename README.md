@@ -50,6 +50,7 @@ So the sequence is:
 - Also make a ####*.wav file that is just a second or two of silence and place that in ./myAudioFiles
 - Optionally make a Attributions.html file for attributions and place that in ./myAudioFiles
 - Connect an SD-card that is 32 gigabytes or less and FAT-32 format the SD-card. In this example it will be on H:
+- - NOTE: it MUST be freshly FAT-32 formatted; do not try to re-use SD card without formatting
 
 At this point, ./myAudioFiles has the following (short list of *.wav to make it readable)
 - 0001_first.wav
