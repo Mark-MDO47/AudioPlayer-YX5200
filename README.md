@@ -46,6 +46,7 @@ It is OK to copy to the SD card using names like 001_this_is_a_test.wav, but if 
 
 So the sequence is:
 - Put your ####*.wav files in a directory. For this example I will use the directory ./myAudioFiles
+- - NOTE: I use # to indicate a decimal digit from 0 through 9
 - Also make a ####*.wav file that is just a second or two of silence and place that in ./myAudioFiles
 - Optionally make a Attributions.html file for attributions and place that in ./myAudioFiles
 - Connect an SD-card that is 32 gigabytes or less and FAT-32 format the SD-card. In this example it will be on H:
