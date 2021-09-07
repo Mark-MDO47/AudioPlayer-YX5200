@@ -26,6 +26,7 @@ Here is a description of my experiences using the YX5200 module (I had some chal
 You definitely want to use the 1K resistor on the TX line or you can distinctly hear clicks during serial communication.
 
 My experience (these comments apply to the modules I used, which had a chip labelled MH-ETLIVE MH2024K-24SS):
+![alt text](https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/images/YX5200_ChipInfo_800x712.jpg "YX5200 Chip Identification used in RBG")
 - Using .playMp3Folder() worked on the first few calls but I had trouble making it work when interrupting a playing sound. I tried a bunch of things (but not every combination) and finally gave it up and now use the most basic of functions .play().
   - Also *.wav files start faster after a command to play. Apparently there is some overhead to start an *.mp3 file. It was a small delay but noticeable in the RBG project.
   - Because the .play() function requires specific filenames and orders of file copies, I wrote copyem.py to help me get the files into the SD card in the correct order.
