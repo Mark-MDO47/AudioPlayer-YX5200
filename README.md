@@ -95,9 +95,11 @@ Then either source mycopy.sh or run mycopy.bat, eject the SD card, and insert it
 
 ## Rewrite of DFRobot routines
 Check out https://https://github.com/PowerBroker2/DFPlayerMini_Fast for a re-write (much simplified) of the DFRobot routines. I continued using the DFRobot routines for this project since by the time I found the other I had a lot of experience with the DFRobot routines.
+* That area also includes a PDF file that is the best information on the chip that forms the basis of the YX5200 module that I have seen.
 
 ## Sound output is surprisingly good - maybe use Bluetooth speaker?
 This module puts out really good sound. On the RBG project, the speaker just wasn't good enough to show off the sound, so I added a KCX_BT_EMITTER module and connected to a powered Bluetooth speaker. Sounds fantastic!
+* https://github.com/Mark-MDO47/RubberBandGun
 
 See here for programming the KCX_BT_EMITTER to auto-connect to your speaker:
 - https://github.com/Mark-MDO47/BluetoothAudioTransmitter_KCX_BT_EMITTER
