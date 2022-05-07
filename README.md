@@ -26,15 +26,19 @@ Here is a description of my experiences using the YX5200 module (I had some chal
 You definitely want to use the 1K resistor on the TX line or you can distinctly hear clicks during serial communication.
 
 My experience (these comments apply to the modules I used)
-- with a chip labelled MH-ETLIVE MH2024K-24SS) on orange RBG:
+- with a chip labelled MH-ETLIVE MH2024K-24SS) on ORANGE SIDEWINDER RBG:
 ![alt text](https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/images/YX5200_ChipInfo_800x712.jpg "YX5200 Chip Identification used in RBG")
+- with a chip labelled JC AA20HFJ616-94 on SILVER SOLENOID RBG (note: lump on green wire is 1K Ohm resistor):
+![alt text](https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/images/YX5200_AA20HFJ616-94_Jim.png "YX5200 Chip JC AA20HFJ616-94 used in SILVER SOLENOID RBG")
 - Using .playMp3Folder() worked on the first few calls but I had trouble making it work when interrupting a playing sound. I tried a bunch of things (but not every combination) and finally gave it up and now use the most basic of functions .play().
   - Also *.wav files start faster after a command to play. Apparently there is some overhead to start an *.mp3 file. It was a small delay but noticeable in the RBG project.
   - Because the .play() function requires specific filenames and orders of file copies, I wrote copyem.py to help me get the files into the SD card in the correct order.
 - While doing the above experiments I had the impression that turning ACK on (default at this time) made it more likely to have the trouble above. I turned ACK off in the .begin(mySoftwareSerial, false, true) call.
 - Sometimes there was a delay in the BUSY pin registering after starting a sound. So far all the delays I have documented were <= 40 milliseconds. Since my code wants to do things (LED-related) faster than that, I put in code to force a fake BUSY for the first 250 milliseconds after starting a sound. Probably overkill.
 - Some of my readings indicate that there are knock-off clones of the YX5200 module that may not implement all the functions properly. My guess would be that they have an out-of-date set of firmware. At least some of these clones used a red LED to indicate sound playing instead of the blue LED used on the genuine YX5200. My modules did have a blue LED, but this is not necessarily a guarantee that they were genuine, so it is possible the problems I had were due to using a knock-off clone.
-- Both grounds on the YX5200 are marked as digital ground, but I found that if I connected them together the line output had a buzz (didn't hear it on speaker output). I got better results when I pretended that the GND between SPK1 and SPK2 was an analog ground.
+- Both grounds on the YX5200 are marked as digital ground, but I found that if I connected them together the line output had a buzz (didn't hear it on speaker output). I got better results when I pretended that the GND between SPK1 and SPK2 was an analog ground.  Seems to be mostly for "Line outputs"; the speaker output is mono sound.
+- YX5200s work with integer 16 bit PCM at frequencies 22.050 KHz, 44.100 KHz, and 48.000 KHz
+- YX5200 DOES NOT WORK with 96.000 KHz, will just skip the file
 
 There have been a lot of reactions to clone modules and difficulties with serial communication and audio noise. Here is an excellent resource on this subject
 
