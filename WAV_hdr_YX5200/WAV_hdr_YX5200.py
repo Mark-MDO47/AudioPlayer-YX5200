@@ -108,19 +108,19 @@ def do_WAV_hdr_YX5200(wavFname):
             val = val.decode()
             if fmt[4] != val:
                 noGood = True
-                print("ERROR: expecting WAV header bytes %d-%d (%s) to be %s not %s" % (fmt[0],fmt[1]-1,fmt[5],fmt[4],val))
+                print("ERROR in %s: expecting WAV header bytes %d-%d (%s) to be %s not %s" % (wavFname, fmt[0],fmt[1]-1,fmt[5],fmt[4],val))
         elif "INTMUSTBE" == fmt[3]:
             if fmt[4] != val:
                 noGood = True
-                print("ERROR: expecting WAV header bytes %d-%d (%s) to be %s not %s" % (fmt[0],fmt[1]-1,fmt[5],fmt[4],val))
+                print("ERROR in %s: expecting WAV header bytes %d-%d (%s) to be %s not %s" % (wavFname, fmt[0],fmt[1]-1,fmt[5],fmt[4],val))
         wav_values[fmt[5]] = val
     if wav_values["SampleRate"] not in goodSampleRates:
         noGood = True
-        print("ERROR: expecting WAV header SampleRate to be one of %s not %s" % (goodSampleRates,wav_values["SampleRate"]))
+        print("ERROR in %s: expecting WAV header SampleRate to be one of %s not %s" % (wavFname, goodSampleRates,wav_values["SampleRate"]))
     if noGood:
-        print("\nERROR: WAV file not usable with YX5200 Audio Module\n")
+        print("\nERROR in %s: WAV file not usable with YX5200 Audio Module\n" % wavFname)
     else:
-        print("\nWAV file is usable with YX5200 Audio Module\n")
+        print("\nWAV file %s is usable with YX5200 Audio Module\n" % wavFname)
     for i in range(len(wav_fmt)):
         fmt = wav_fmt[i]
         print("%s: %s" % (fmt[5], wav_values[fmt[5]]))
