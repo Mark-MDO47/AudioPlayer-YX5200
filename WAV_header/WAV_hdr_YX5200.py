@@ -1,4 +1,4 @@
-# WAV_header.py - read and check the WAV/RIFF header for use on WX5200
+# WAV_hdr_YX5200.py - read and check the WAV/RIFF header for use on WX5200
 # Author: Mark Olson 2023-05-29
 #
 # References:
@@ -58,14 +58,14 @@ def little_endian_to_big_int(inVal,numBytes):
     return outVal
         
 ###################################################################################
-# do_WAV_header - read and parse WAV/RIFF header
+# do_WAV_hdr_YX5200 - read and parse WAV/RIFF header
 #
 # Assumes we are on an Intel Windows machine.
 # Bytes are a mixture of little-endian and big-endian.
 #
 # Checks to see if this file is appropriate for use with WX5200 Audio Module
 #
-def do_WAV_header(wavFname):
+def do_WAV_hdr_YX5200(wavFname):
     header = [] # little-endian
     wav_fmt = [
         [ 0, 4,"BE","STRMUSTBE","RIFF","ChunkID"],
@@ -108,38 +108,40 @@ def do_WAV_header(wavFname):
             val = val.decode()
             if fmt[4] != val:
                 noGood = True
-                print("ERROR: expecting WAV header bytes %d-%d to be %s not %s" % (fmt[0],fmt[1]-1,fmt[4],val))
+                print("ERROR: expecting WAV header bytes %d-%d (%s) to be %s not %s" % (fmt[0],fmt[1]-1,fmt[5],fmt[4],val))
         elif "INTMUSTBE" == fmt[3]:
             if fmt[4] != val:
                 noGood = True
-                print("ERROR: expecting WAV header bytes %d-%d to be %s not %s" % (fmt[0],fmt[1]-1,fmt[4],val))
+                print("ERROR: expecting WAV header bytes %d-%d (%s) to be %s not %s" % (fmt[0],fmt[1]-1,fmt[5],fmt[4],val))
         wav_values[fmt[5]] = val
     if wav_values["SampleRate"] not in goodSampleRates:
         noGood = True
         print("ERROR: expecting WAV header SampleRate to be one of %s not %s" % (goodSampleRates,wav_values["SampleRate"]))
     if noGood:
-        print("\nERROR: WAV file not usable with YX5200 Audio Module")
+        print("\nERROR: WAV file not usable with YX5200 Audio Module\n")
     else:
-        print("\nWAV file is usable with YX5200 Audio Module")
-    print("\n%s" % wav_values)
+        print("\nWAV file is usable with YX5200 Audio Module\n")
+    for i in range(len(wav_fmt)):
+        fmt = wav_fmt[i]
+        print("%s: %s" % (fmt[5], wav_values[fmt[5]]))
 
 ###################################################################################
-# "__main__" processing for WAV_header
+# "__main__" processing for WAV_hdr_YX5200
 #
 # use argparse to process command line arguments
-# python WAV_header.py -h to see what the arguments are
+# python WAV_hdr_YX5200.py -h to see what the arguments are
 #
 if __name__ == "__main__":
-    my_parser = argparse.ArgumentParser(prog='WAV_header',
+    my_parser = argparse.ArgumentParser(prog='WAV_hdr_YX5200',
         formatter_class=argparse.RawTextHelpFormatter,
-        description="read and parse WAV/RIFF header to stdout - hex (little- and big-endian) plus interpretation",
+        description="read and check WAV/RIFF header for use on YX5200",
         epilog="""Example:
-python WAV_header.py myFile.wav
+python WAV_hdr_YX5200.py myFile.wav
 """,
         usage='%(prog)s wavFname wavFname')
-    my_parser.add_argument('wavFname',type=str,help='path to wavFname text file, copied from Kindle book list')
+    my_parser.add_argument('wavFname',type=str,help='path to wavFname, file in WAV format')
     args = my_parser.parse_args()
 
     # all the real work is done here
-    do_WAV_header(args.wavFname)
+    do_WAV_hdr_YX5200(args.wavFname)
 
