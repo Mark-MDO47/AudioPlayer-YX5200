@@ -44,8 +44,17 @@ There have been a lot of reactions to clone modules and difficulties with serial
 
 https://www.thebackshed.com/forum/ViewTopic.php?TID=11977&P=1
 
-# copyem.py
+# WAV_hdr_YX5200.py
+This routine allows checking of *.wav files to see if they are the correct format for using with the YX5200.
+- https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/WAV_hdr_YX5200/WAV_hdr_YX5200.py
 
+Below is the help text from WAV_hdr_YX5200.py.<br>
+![alt text](https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/images/WAV_hdr_YX5200.png "Help text for WAV_hdr_YX5200.py")
+
+Below is an example use of WAV_hdr_YX5200.py.<br>
+![alt text](https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/images/WAV_hdr_YX5200_example.png "Help text for WAV_hdr_YX5200.py")
+
+# copyem.py
 This is a routine that makes it much easier to create SD cards that work with the .play() routine. Below is the help text from copyem.py.
 
 Note: I run this routine in GIT bash on Windows 10, so I use the H: (or other letter) to access the drive but use the / separator for directories.
