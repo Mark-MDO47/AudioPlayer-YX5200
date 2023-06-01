@@ -49,7 +49,7 @@ This routine allows checking of *.wav files to see if they are the correct forma
 - https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/WAV_hdr_YX5200/WAV_hdr_YX5200.py
 
 Below is the help text from WAV_hdr_YX5200.py.<br>
-![alt text](https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/images/WAV_hdr_YX5200.png "Help text for WAV_hdr_YX5200.py")
+![alt text](https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/images/WAV_hdr_YX5200_Help.png "Help text for WAV_hdr_YX5200.py")
 
 Below is an example use of WAV_hdr_YX5200.py.<br>
 ![alt text](https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/images/WAV_hdr_YX5200_example.png "Help text for WAV_hdr_YX5200.py")
