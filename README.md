@@ -3,6 +3,7 @@ Easy method to reliably use the YX5200 Audio Player module.
 
 **Table of Contents**
 * [Top](#audioplayer\-yx5200 "Top")
+* [Introduction](#introduction "Introduction")
 * [My Experiences](#my-experiences "My Experiences")
 * [WAV_hdr_YX5200.py](#wav_hdr_yx5200 "WAV_hdr_YX5200.py")
 * [copyem.py](#copyem "copyem.py")
@@ -10,6 +11,7 @@ Easy method to reliably use the YX5200 Audio Player module.
   * [Rewrite of DFRobot routines](#rewrite-of-dfrobot-routines "Rewrite of DFRobot routines")
   * [Add Bluetooth](#add-bluetooth "Add Bluetooth")
 
+## Introduction
 These routines were developed by me for the Rubber Band Gun (RBG) project.
 * https://github.com/Mark-MDO47/RubberBandGun
 
