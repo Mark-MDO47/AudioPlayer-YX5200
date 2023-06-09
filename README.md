@@ -36,7 +36,8 @@ Best datasheet I could find on the YX5200 chip is found here
 [Top](#audioplayer\-yx5200 "Top")<br>
 Here is a description of my experiences using the YX5200 module (I had some challenges)
 
-You definitely want to use the 1K resistor on the TX line or you can distinctly hear clicks during serial communication.
+You definitely want to use the 1K resistor on the RX line or you can distinctly hear clicks during serial communication.<br>
+It might be that the reason I don't need a 1K resistor on the TX line to avoid noise is that I turn ACK off in the .begin(mySoftwareSerial, false, true) call.
 
 My experience (these comments apply to the modules I used)
 - with a chip labelled MH-ETLIVE MH2024K-24SS) on ORANGE SIDEWINDER RBG:
