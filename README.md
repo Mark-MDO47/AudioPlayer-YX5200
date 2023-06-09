@@ -123,7 +123,8 @@ Then either source mycopy.sh or run mycopy.bat, eject the SD card, and insert it
 ## Rewrite of DFRobot routines
 [Top](#audioplayer\-yx5200 "Top")<br>
 Check out https://github.com/PowerBroker2/DFPlayerMini_Fast for a re-write (much simplified) of the DFRobot routines. I continued using the DFRobot routines for this project since by the time I found the other I had a lot of experience with the DFRobot routines.
-* That area also includes a PDF file that is the best information on the chip that forms the basis of the YX5200 module that I have seen.
+* That area also includes a PDF file that is the best information on the chip that forms the basis of the YX5200 module that I have seen:
+* https://github.com/PowerBroker2/DFPlayerMini_Fast/blob/master/extras/FN-M16P%2BEmbedded%2BMP3%2BAudio%2BModule%2BDatasheet.pdf
 
 ## Add Bluetooth
 [Top](#audioplayer\-yx5200 "Top")<br>
