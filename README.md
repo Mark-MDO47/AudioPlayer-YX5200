@@ -1,6 +1,15 @@
 # AudioPlayer-YX5200
 Easy method to reliably use the YX5200 Audio Player module.
 
+**Table of Contents**
+* [Top](#audioplayer\-yx5200 "Top")
+* [My Experiences](#my-experiences "My Experiences")
+* [WAV_hdr_YX5200.py](#wav_hdr_yx5200 "WAV_hdr_YX5200.py")
+* [copyem.py](#copyem "copyem.py")
+* [Extras](#extras "Extras")
+  * [Rewrite of DFRobot routines](#rewrite-of-dfrobot-routines "Rewrite of DFRobot routines")
+  * [Add Bluetooth](#add-bluetooth "Add Bluetooth")
+
 These routines were developed by me for the Rubber Band Gun (RBG) project.
 * https://github.com/Mark-MDO47/RubberBandGun
 
@@ -20,7 +29,7 @@ Best datasheet I could find on the YX5200 chip is found here
 * https://github.com/PowerBroker2/DFPlayerMini_Fast/blob/master/extras/FN-M16P%2BEmbedded%2BMP3%2BAudio%2BModule%2BDatasheet.pdf
 
 # My Experiences
-
+[Top](#audioplayer\-yx5200 "Top")<br>
 Here is a description of my experiences using the YX5200 module (I had some challenges)
 
 You definitely want to use the 1K resistor on the TX line or you can distinctly hear clicks during serial communication.
@@ -46,6 +55,7 @@ There have been a lot of reactions to clone modules and difficulties with serial
 https://www.thebackshed.com/forum/ViewTopic.php?TID=11977&P=1
 
 # WAV_hdr_YX5200
+[Top](#audioplayer\-yx5200 "Top")<br>
 This routine allows checking of *.wav files to see if they are the correct format for using with the YX5200.
 - https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/WAV_hdr_YX5200/WAV_hdr_YX5200.py
 
@@ -56,6 +66,7 @@ Below is an example use of WAV_hdr_YX5200.py.<br>
 ![alt text](https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/images/WAV_hdr_YX5200_example.png "Help text for WAV_hdr_YX5200.py")
 
 # copyem
+[Top](#audioplayer\-yx5200 "Top")<br>
 This is a routine that makes it much easier to create SD cards that work with the .play() routine. Below is the help text from copyem.py.
 
 Note: I run this routine in GIT bash on Windows 10, so I use the H: (or other letter) to access the drive but use the / separator for directories.
@@ -101,13 +112,16 @@ Alternatively, "python copyem.py -d ./myAudioFiles -s H: -f 0005_silence.wav --w
 
 Then either source mycopy.sh or run mycopy.bat, eject the SD card, and insert it into the YX5200.
 
-# Extras:
+# Extras
+[Top](#audioplayer\-yx5200 "Top")<br>
 
 ## Rewrite of DFRobot routines
+[Top](#audioplayer\-yx5200 "Top")<br>
 Check out https://https://github.com/PowerBroker2/DFPlayerMini_Fast for a re-write (much simplified) of the DFRobot routines. I continued using the DFRobot routines for this project since by the time I found the other I had a lot of experience with the DFRobot routines.
 * That area also includes a PDF file that is the best information on the chip that forms the basis of the YX5200 module that I have seen.
 
-## Sound output is surprisingly good - maybe use Bluetooth speaker?
+## Add Bluetooth
+[Top](#audioplayer\-yx5200 "Top")<br>
 This module puts out really good sound. On the RBG project, the speaker just wasn't good enough to show off the sound, so I added a KCX_BT_EMITTER module and connected to a powered Bluetooth speaker. Sounds fantastic!
 * https://github.com/Mark-MDO47/RubberBandGun
 
