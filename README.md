@@ -32,7 +32,8 @@ My experience (these comments apply to the modules I used)
 ![alt text](https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/images/YX5200_AA20HFJ616-94_Jim.png "YX5200 Chip JC AA20HFJ616-94 used in SILVER SOLENOID RBG")
 - Using .playMp3Folder() worked on the first few calls but I had trouble making it work when interrupting a playing sound. I tried a bunch of things (but not every combination) and finally gave it up and now use the most basic of functions .play().
   - Also *.wav files start faster after a command to play. Apparently there is some overhead to start an *.mp3 file. It was a small delay but noticeable in the RBG project.
-  - Because the .play() function requires specific filenames and orders of file copies, I wrote copyem.py to help me get the files into the SD card in the correct order.
+  - Because there are restrictions on *.wav file formats that work with the YX5200, I wrote  [WAV_hdr_YX5200.py](#wav_hdr_yx5200 "WAV_hdr_YX5200.py") to check that the *.wav files meet those restrictions.
+  - Because the .play() function requires specific filenames and orders of file copies, I wrote [copyem.py](#copyem "copyem.py") to help get the files into the SD card in the correct order.
 - While doing the above experiments I had the impression that turning ACK on (default at this time) made it more likely to have the trouble above. I turned ACK off in the .begin(mySoftwareSerial, false, true) call.
 - Sometimes there was a delay in the BUSY pin registering after starting a sound. So far all the delays I have documented were <= 40 milliseconds. Since my code wants to do things (LED-related) faster than that, I put in code to force a fake BUSY for the first 250 milliseconds after starting a sound. Probably overkill.
 - Some of my readings indicate that there are knock-off clones of the YX5200 module that may not implement all the functions properly. My guess would be that they have an out-of-date set of firmware. At least some of these clones used a red LED to indicate sound playing instead of the blue LED used on the genuine YX5200. My modules did have a blue LED, but this is not necessarily a guarantee that they were genuine, so it is possible the problems I had were due to using a knock-off clone.
@@ -44,7 +45,7 @@ There have been a lot of reactions to clone modules and difficulties with serial
 
 https://www.thebackshed.com/forum/ViewTopic.php?TID=11977&P=1
 
-# WAV_hdr_YX5200.py
+# WAV_hdr_YX5200
 This routine allows checking of *.wav files to see if they are the correct format for using with the YX5200.
 - https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/WAV_hdr_YX5200/WAV_hdr_YX5200.py
 
@@ -54,7 +55,7 @@ Below is the help text from WAV_hdr_YX5200.py.<br>
 Below is an example use of WAV_hdr_YX5200.py.<br>
 ![alt text](https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/images/WAV_hdr_YX5200_example.png "Help text for WAV_hdr_YX5200.py")
 
-# copyem.py
+# copyem
 This is a routine that makes it much easier to create SD cards that work with the .play() routine. Below is the help text from copyem.py.
 
 Note: I run this routine in GIT bash on Windows 10, so I use the H: (or other letter) to access the drive but use the / separator for directories.
