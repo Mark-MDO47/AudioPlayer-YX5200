@@ -12,6 +12,8 @@ Easy method to reliably use the YX5200 Audio Player module.
   * [Add Bluetooth](#add-bluetooth "Add Bluetooth")
 
 ## Introduction
+[Top](#audioplayer\-yx5200 "Top")<br>
+
 These routines were developed by me for the Rubber Band Gun (RBG) project.
 * https://github.com/Mark-MDO47/RubberBandGun
 
