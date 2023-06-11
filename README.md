@@ -43,10 +43,10 @@ In my experience, despite what images may be used in marketing, YX5200 modules w
 | Chip Markings | Comments |
 | --- | --- |
 | DFROBOT\|LISP3 | from dfrobot.com |
-| MH2024K-16SS | |
+| MH2024K-16SS | louder than others; packaging says Teyleten Robul X002K0BRIX |
 | MH2024K-24SS | |
-| AA19HF J614-94 | |
-| AA20HF J616-94 | |
+| AA19HF J614-94 | packaging says ANMBEST |
+| AA20HF J616-94 | packaging says ANMBEST |
 
 My experience (these comments apply to the modules I used)
 - with a chip labelled MH-ETLIVE MH2024K-24SS) on ORANGE SIDEWINDER RBG:
