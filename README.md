@@ -39,6 +39,15 @@ Here is a description of my experiences using the YX5200 module (I had some chal
 You definitely want to use the 1K resistor on the RX line or you can distinctly hear clicks during serial communication.<br>
 It might be that the reason I don't need a 1K resistor on the TX line to avoid noise is that I turn ACK off in the .begin(mySoftwareSerial, false, true) call.
 
+In my experience, despite what images may be used in marketing, YX5200 modules will arrive with various chips to implement them along with various performance characteristics. I have found that the modules I have with the following chip markings will work with the code in the Rubber Band Gun, which restricts itself to using *.wav files and the .play(filenumber) function after initialization. Images of the chip markings can be found in https://github.com/Mark-MDO47/AudioPlayer-YX5200/tree/master/images.<br>
+| Chip Markings | Comments |
+| --- | --- |
+| DFROBOT\|LISP3 | from dfrobot.com |
+| MH2024K-16SS | |
+| MH2024K-24SS | |
+| AA19HF J614-94 | |
+| AA20HF J616-94 | |
+
 My experience (these comments apply to the modules I used)
 - with a chip labelled MH-ETLIVE MH2024K-24SS) on ORANGE SIDEWINDER RBG:
 ![alt text](https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/images/YX5200_ChipInfo_800x712.jpg "YX5200 Chip Identification used in RBG")
