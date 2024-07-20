@@ -51,8 +51,8 @@ In my experience, despite what images may be used in marketing, YX5200 modules w
 My experience (these comments apply to the modules I used)
 - with a chip labelled MH-ETLIVE MH2024K-24SS) on ORANGE SIDEWINDER RBG:
 ![alt text](https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/images/YX5200_ChipInfo_800x712.jpg "YX5200 Chip Identification used in RBG")
-- with a chip labelled JC AA20HFJ616-94 on SILVER SOLENOID RBG (note: lump on green wire is 1K Ohm resistor):
-![alt text](https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/images/YX5200_AA20HFJ616-94_Jim.png "YX5200 Chip JC AA20HFJ616-94 used in SILVER SOLENOID RBG")
+- with a chip labelled JL AA20HFJ616-94 on SILVER SOLENOID RBG (note: lump on green wire is 1K Ohm resistor):
+![alt text](https://github.com/Mark-MDO47/AudioPlayer-YX5200/blob/master/images/YX5200_AA20HFJ616-94_Jim.png "YX5200 Chip JL AA20HFJ616-94 used in SILVER SOLENOID RBG")
 - Using .playMp3Folder() worked on the first few calls but I had trouble making it work when interrupting a playing sound. I tried a bunch of things (but not every combination) and finally gave it up and now use the most basic of functions .play().
   - Also *.wav files start faster after a command to play. Apparently there is some overhead to start an *.mp3 file. It was a small delay but noticeable in the RBG project.
   - Because there are restrictions on *.wav file formats that work with the YX5200, I wrote  [WAV_hdr_YX5200.py](#wav_hdr_yx5200 "WAV_hdr_YX5200.py") to check that the *.wav files meet those restrictions.
